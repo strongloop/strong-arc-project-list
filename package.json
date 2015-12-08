@@ -4,9 +4,7 @@
   "version": "1.0.0",
   "main": "server/server.js",
   "scripts": {
-    "pretest": "eslint --ignore-path .gitignore .",
-    "test": "tap --bail --coverage --coverage-report=cobertura --timeout=200 test/test-*.*",
-    "posttest": "nyc report --reporter=lcov && nyc report"
+    "pretest": "eslint --ignore-path .gitignore ."
   },
   "dependencies": {
     "compression": "^1.0.3",
@@ -24,7 +22,8 @@
   "devDependencies": {
     "eslint": "^1.10.1",
     "eslint-config-strongloop": "^1.0.4",
-    "nyc": "^3.2.2"
+    "nyc": "^3.2.2",
+    "tap": "^2.3.1"
   },
   "repository": {
     "type": "git",
