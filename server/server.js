@@ -1,7 +1,7 @@
 var boot = require('loopback-boot');
 var loopback = require('loopback');
 var mkdirp = require('mkdirp');
-var os = require('os');
+var osenv = require('osenv');
 var path = require('path');
 
 var app = module.exports = loopback();
@@ -16,7 +16,7 @@ app.start = function() {
 
 // Bootstrap the application, configure models, datasources and middleware.
 // Sub-apps like REST API are mounted via boot scripts.
-var configDir = path.join(os.homedir(), '.strong-arc');
+var configDir = path.join(osenv.home(), '.strong-arc');
 mkdirp(configDir, function(err) {
   if (err) throw err;
 
