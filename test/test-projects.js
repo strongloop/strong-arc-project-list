@@ -28,8 +28,8 @@ test('Test project list', function(t) {
         });
     });
 
-    t.test('.strong-arc dir is created', function(t) {
-      fs.stat(path.join(dir, '.strong-arc', 'project.json'), function(err) {
+    t.test('.apiconnect dir is created', function(t) {
+      fs.stat(path.join(dir, '.apiconnect', 'project.json'), function(err) {
         t.ifError(err);
         t.end();
       });

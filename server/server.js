@@ -16,7 +16,7 @@ app.start = function() {
 
 // Bootstrap the application, configure models, datasources and middleware.
 // Sub-apps like REST API are mounted via boot scripts.
-var configDir = path.join(osenv.home(), '.strong-arc');
+var configDir = path.join(osenv.home(), '.apiconnect');
 mkdirp(configDir, function(err) {
   if (err) throw err;
 
