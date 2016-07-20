@@ -20,13 +20,22 @@ test('Test project list', function(t) {
     };
 
     var app = require('../server/server');
+
+    var testObj1 = {
+      name: 'foo',
+      path: '/path/to/foo',
+    };
+
+    var testObj2 = {
+      name: 'bar',
+      path: __dirname,
+      id: 2,
+    };
+
     t.test('save a project', function(t) {
       request(app)
         .post('/projects')
-        .send({
-          name: 'foo',
-          path: '/path/to/foo',
-        })
+        .send(testObj1)
         .expect(200, function(err, res) {
           t.ifError(err);
           t.end();
@@ -38,6 +47,31 @@ test('Test project list', function(t) {
         t.ifError(err);
         t.end();
       });
+    });
+
+    t.test('save another project where the path actually exist', function(t) {
+      request(app)
+        .post('/projects')
+        .send({
+          name: 'bar',
+          path: __dirname,
+        })
+        .expect(200, function(err, res) {
+          t.ifError(err);
+          t.end();
+        });
+    });
+
+    // only bar should be left, since foo's path does not exist
+    t.test('list projects', function(t) {
+      request(app)
+        .get('/projects')
+        .set('Accept', 'application/json')
+        .expect(200, function(err, res) {
+          t.ifError(err);
+          t.deepEqual(res.body, [ testObj2 ]);
+          t.end();
+        });
     });
 
     t.end();
