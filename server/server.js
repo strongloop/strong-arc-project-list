@@ -6,7 +6,7 @@
 var boot = require('loopback-boot');
 var loopback = require('loopback');
 var mkdirp = require('mkdirp');
-var osenv = require('osenv');
+var apicConfig = require('apiconnect-cli-config');
 var path = require('path');
 
 var app = module.exports = loopback();
@@ -21,7 +21,7 @@ app.start = function() {
 
 // Bootstrap the application, configure models, datasources and middleware.
 // Sub-apps like REST API are mounted via boot scripts.
-var configDir = path.join(osenv.home(), '.apiconnect');
+var configDir = apicConfig.getUserConfigDir();
 mkdirp(configDir, function(err) {
   if (err) throw err;
 
