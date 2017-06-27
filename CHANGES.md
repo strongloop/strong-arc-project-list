@@ -1,4 +1,10 @@
-2016-10-05, Version 1.0.3
+2017-06-27, Version 1.0.4
+=========================
+
+ * update license notices (Ryan Graham)
+
+
+2016-10-04, Version 1.0.3
 =========================
 
  * Add auto-clean for removed projects (Bosco Li)

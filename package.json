@@ -1,7 +1,7 @@
 {
   "name": "strong-arc-project-list",
   "description": "Arc backend component to store a list of projects",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "main": "server/server.js",
   "scripts": {
     "pretest": "eslint --ignore-path .gitignore .",
