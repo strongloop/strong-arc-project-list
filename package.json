@@ -23,12 +23,12 @@
     "loopback-explorer": "^1.1.0"
   },
   "devDependencies": {
-    "eslint": "^1.x",
-    "eslint-config-strongloop": "^1.x",
+    "eslint": "^5.16.0",
+    "eslint-config-strongloop": "^2.x",
     "mktmpdir": "^0.1.1",
-    "nyc": "^3.x",
-    "supertest": "^1.x",
-    "tap": "^6.x"
+    "nyc": "^14.1.1",
+    "supertest": "^4.0.2",
+    "tap": "^14.2.0"
   },
   "repository": {
     "type": "git",
