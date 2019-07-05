@@ -20,7 +20,7 @@
     "strong-error-handler": "^1.x"
   },
   "optionalDependencies": {
-    "loopback-explorer": "^1.1.0"
+    "loopback-component-explorer": "^6.4.0"
   },
   "devDependencies": {
     "eslint": "^5.16.0",
