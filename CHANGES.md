@@ -1,3 +1,9 @@
+2019-07-10, Version 4.0.0
+=========================
+
+ * fix(sec): updated loopback-explorer dep (imanjra)
+
+
 2019-06-04, Version 3.0.0
 =========================
 
